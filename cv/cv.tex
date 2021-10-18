@@ -1,0 +1,340 @@
+% Jason R. Blevins - Curriculum Vitae
+%
+% Copyright (C) 2004-2020 Jason R. Blevins <jblevins@xbeta.org>
+% https://jblevins.org/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely.  No attribution is
+% required in any resulting documents.  I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\documentclass[11pt,letterpaper]{article}
+
+% Set your name here
+\def\name{J. Kevin Pierce}
+
+% Load packages
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{enumitem} % Enumerate with [resume] option
+\usepackage{fontspec} % Requires XeTeX
+\usepackage{sectsty} % Custom section fonts
+
+% Body
+\setmainfont{Sen}
+
+% Title
+\newfontfamily\titleface{Sen-ExtraBold}
+\newcommand{\titlefont}[1]{{\titleface\Large\MakeUppercase{#1}}}
+
+% Section Headings
+\newfontfamily\sectionface{Sen-Bold}
+\sectionfont{\sectionface\mdseries\normalsize\uppercase}
+\subsectionfont{\sectionface\mdseries\normalsize\itshape}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+	colorlinks = true,
+	urlcolor = black,
+	pdfauthor = {\name},
+	pdfkeywords = {geomorphology, sediment transport, surface processes, stochastic processes},
+	pdftitle = {\name: Curriculum Vitae},
+	pdfsubject = {Curriculum Vitae},
+	pdfpagemode = UseNone
+}
+
+\geometry{
+	body={6.5in, 9.0in},
+	left=1.0in,
+	top=1.0in
+}
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets and compact spacing
+\renewenvironment{itemize}{
+	\begin{list}{}{
+			\setlength{\leftmargin}{1.5em}
+			\setlength{\rightmargin}{0em}  % uhhh
+			\setlength{\itemsep}{0.25em}
+			\setlength{\parskip}{0pt}
+			\setlength{\parsep}{0.25em}
+		}
+	}{
+	\end{list}
+}
+
+
+% now make an itemize with black squaresb
+\usepackage{amssymb} % to get the blacksquare
+\newenvironment{itemizeit}
+{\itemize\let\origitem\item
+	\renewcommand{\item}[1][default]
+	{\origitem[\tiny $\blacksquare$]}}
+{\enditemize}
+
+
+
+\setlist[enumerate]{itemsep=0.25em}
+\renewenvironment{itemize}{
+	\begin{list}{}{
+			\setlength{\leftmargin}{1.5em}
+			\setlength{\itemsep}{0.25em}
+			\setlength{\parskip}{0pt}
+			\setlength{\parsep}{0.25em}
+		}
+	}{
+	\end{list}
+}
+\setlist[enumerate]{itemsep=0.25em}
+
+
+
+% Print the month and year
+\renewcommand{\today}{\ifcase \month \or January\or February\or March\or April\or May%
+	\or June\or July\or August\or September\or October\or November\or December\fi%
+	\space \number \year}
+
+% COVID-19 Cancellations
+\newcommand{\fncovid}{{\footnotesize ${}^{\dagger}$}}
+
+\begin{document}
+	
+	% Place name at left and date at right
+	\titlefont{\name}
+	
+	% Alternatively, print name centered and bold:
+	%\centerline{\titlefont{\name}}
+	
+	% Date
+	\bigskip
+	\today
+	
+	% Contact Information
+	\bigskip
+	\begin{minipage}[t]{0.495\textwidth}
+		The Department of Geography \\
+		University of British Columbia \\
+		1984 West Mall \\
+		Vancouver, BC, Canada  V6T 1Z4
+	\end{minipage}
+	\begin{minipage}[t]{0.495\textwidth}
+		\href{https://jkpierce.github.io/}{https://jkpierce.github.io/} \\
+		\href{https://geog.ubc.ca/profile/kevin-pierce/}{https://geog.ubc.ca/profile/kevin-pierce/}\\
+		\href{mailto:j.kevin.pierce@ubc.ca}{j.kevin.pierce@ubc.ca}
+	\end{minipage}
+	
+	\section*{Education}
+	
+	\begin{itemize}
+		\item {\bf Ph.D. Geography}, University of British Columbia, 2021.
+		\begin{itemize}
+			\item Dissertation: \href{https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/24/items/1.0402359}{``The stochastic movements of individual streambed grains''}.
+			\item Committee: Marwan A. Hassan (supervisor), Rui M.L. Ferreira, Brett Eaton.
+		\end{itemize}
+		\item {\bf M.Sc. Physics}, University of British Columbia, 2016.
+		\begin{itemize}
+			\item Thesis: \href{https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/24/items/1.0300170}{``Magnetic structure of chiral graphene nanoribbons''}.
+			\item Physics GRE score at admission: 980/990.
+		\end{itemize}
+		\item {\bf B.S. Physics},
+		West Virginia University, 2013.
+		\begin{itemize}
+			\item GPA: 3.92/4.00
+			\item Awarded ``Outstanding Undergraduate Physics Senior" (2012-2013).
+			\item Minor in Mathematics.
+		\end{itemize}
+	\end{itemize}
+	
+	\section*{Research Topics}
+	
+	Landscape Evolution, Sediment Transport, Hydrodynamics, Statistical Mechanics.
+
+
+
+\section*{Conference Presentations}
+
+	\begin{itemize}
+		\item \textbf{Pierce, K.} \& M.A. Hassan (2021). Mechanistic-stochastic description of the bedload sediment flux, AGU General Assembly Conference Abstracts, EP43A-02.
+		
+		\item \textbf{Pierce, K.} \& M.A. Hassan (2020). Collisional Langevin approach to bed load sediment velocity distributions, EGU General Assembly Conference Abstracts, EGU21-8148.
+		
+		\item \textbf{Pierce, K.} \& M.A. Hassan (2020). Particle shape dictates critical shear stresses for sediment motion, AGU Fall Meeting Abstracts, EP013-0007.
+		
+		\item Ferreira, R.M.L., Aleixo, R.F., Ricardo, A.M., \textbf{Pierce, K.}, \& M.A. Hassan (2020) Turbulence in open-channel flows over mobile beds of high hydraulic conductivity, AGU Fall Meeting Abstracts, EP003-0002.
+		
+		\item \textbf{Pierce, K.} \& M.A. Hassan (2019). Back to Einstein: How to include trapping processes in fluvial diffusion models?, AGU Fall Meeting Abstracts, EP51B-02.
+		
+		\item \textbf{Pierce, K.}, Ferreira, R.M.L., \& M.A. Hassan (2019). Three-dimensional resolution of bedload transport with binocular computer vision, AGU Fall Meeting Abstracts 2019, EP51F-2185.
+		
+		\item \href{https://www.osapublishing.org/ol/abstract.cfm?uri=ol-37-5-788}{\textbf{Pierce, K.} \& I. Affleck (2015). Edge magnetism of chiral graphene nanoribbons, CIFAR Conference in Quantum Materials.}
+	\end{itemize}
+
+
+\section*{Peer-Reviewed Publications}
+	
+	\begin{itemize}
+		\item[] \textbf{Pierce, K.} \& M.A. Hassan (2020). Back to Einstein: Burial-induced three-range diffusion in fluvial sediment transport. Geophysical Research Letters, 47 (15), 1-10. doi: 10.1029/2020GL087440.
+		\item[] \textbf{Pierce, K.} \& M.A. Hassan (2020). Joint stochastic bedload transport and bed
+		elevation model: Variance regulation and power-law rests. Journal of Geophysical Research: Earth Surface, 125 (4), 1–15. doi: 10.1029/2019JF005259.
+		\item[] Rowley J.D., \textbf{Pierce K.}, Brant A.T., Halliburton L.E., Giles N.C., Schunemann P.G., \& A.D. Bristow (2012). Broadband terahertz pulse emission from ZnGeP$\textsubscript{2}$. Optics Letters, 37 (5),  788-790. doi: 10.1364/OL.37.000788.
+	\end{itemize}
+
+
+	
+	\section*{Working Papers}
+	
+	\begin{itemize}
+		\item[] \textbf{Pierce, K.}, Hassan, M.A., \& R.M.L. Ferreira (2021). Mechanistic-stochastic description of the bed load sediment flux.
+		\item[] \textbf{Pierce, K.}, Hassan, M.A., \& R.M.L. Ferreira (2021). Collisional Langevin description of bedload sediment velocity distributions.
+		\item[] \textbf{Pierce, K.} \& M.A. Hassan (2021). Particle entrainment as a first passage problem: Experiments and modeling.
+		\item[] \textbf{Pierce, K.} \& M.A. Hassan (2021). Bedload transport of angular grains: Entrainment, motion, and deposition.
+	\end{itemize}
+	
+	\section*{Invited Talks}
+	\begin{itemize}
+		\item[] \textbf{Pierce, K.}, Moragoda, N., \& L. Roberge (2021). Including wildfires in a landscape evolution model. Community Surface Dynamics Modeling System, Fall Webinar Series.
+
+		\item[] \textbf{Pierce, K.} \& M.A. Hassan (2021). Velocity distributions, particle activities, and the sediment flux. Vanderbilt University, Department of Earth and Environmental Sciences.
+			
+		\item[] \textbf{Pierce, K.} \& M.A. Hassan (2020). Collisional Langevin approach to bed load sediment transport. Simon Fraser University, School of Environmental Science \& Geography.
+	\end{itemize}
+
+\section*{Workshops Attended}
+
+\begin{itemize}
+\item {\bf Earth Surface Processes Institute}, University of Colorado, Boulder. \hfill (Jun. 2021)
+
+	\begin{itemizeit} 
+		\item Attended an eight day workshop on Earth surface dynamics modeling.
+		\item Studied numerical methods, best programming practices, open source software development, collaborative coding, version control, Landlab, high performance computing, and model uncertainty quantification.
+		\item Developed a computational landscape evolution model which includes stochastic wildfires that modify erosion rates. The model evaluates impacts of wildfire on channel organization and sediment yields.
+		\item Produced a Landlab ``Education and Knowledge Transfer" lab, now hosted on the \href{https://csdms.colorado.edu/wiki/Labs_portal}{Community Surface Dynamics Modeling System website} as an example of how to use the Landlab modeling suite to evaluate the impact of wildfires on landscape evolution.
+	\end{itemizeit}
+
+\item {\bf Instructional Skills Workshop}, University of British Columbia. \hfill (Jan. 2020)
+
+	\begin{itemizeit} 
+		\item Participated in a three day workshop on teaching models, strategies to foster active learning in students, inclusive teaching, lesson planning, interactive lessons, and emerging technologies in education.
+		\item Delivered three lessons to a group of peer reviewers. Peer reviews and discussions on these lessons helped indicate personal teaching patterns and set benchmarks by which to improve teaching methods.
+	\end{itemizeit}
+
+\item {\bf Quantum Materials Summer School}, CIFAR, Canada. \hfill (May 2015)%
+
+	\begin{itemizeit}
+		\item Attended a two week workshop on condensed matter physics, including topological materials, superconductivity, and quantum magnetism.
+		\item Collaborated on physics assignments, attended lectures, and presented research on emergent magnetism in lower-dimensional materials.
+	\end{itemizeit}
+\end{itemize}
+
+
+\section*{Outreach Activities}
+\begin{itemize}
+\item {\bf Science 101}, University of British Columbia. \hfill (May. 2021 -- Aug. 2021)
+
+	\begin{itemizeit} 
+		\item Volunteered in a university outreach program designed to introduce traditionally-excluded communities and older adults to scientific thinking and academic opportunities.
+		\item Led discussions on topics in Earth and Biological sciences, scientific writing, and critical interpretation of writing. Delivered lectures on physical geography, identifying reliable sources, and plant taxonomy.
+	\end{itemizeit}
+
+\item { \bf Books for Me!}, Vancouver, BC. \hfill (Sep. 2016 -- Sep. 2018)
+
+	\begin{itemizeit} % Reduce space between items
+		\item Volunteered at a non-profit to encourage literacy among disadvantaged children in Vancouver's downtown East side.
+		\item Secured book donations and hosted events at elementary schools to distribute books to children.
+		\item Read books to groups of children to encourage positive relationships with reading.
+	\end{itemizeit}
+\end{itemize}
+
+
+\section*{Professional Experience}
+\begin{itemize}
+
+\item {\bf Postdoctoral Research Associate}, University of British Columbia. \hfill (Oct. 2021 -- Present)
+
+\begin{itemizeit} 
+	\item Conducting laboratory flume experiments on grain-scale sediment transport processes, using high-speed cameras and a variety of image analysis techniques, including structure from motion, particle image velociometry, and particle tracking velociometry. We are studying sediment entrainment mechanics with particular emphasis on the role of collisions in bed load sediment transport.
+    \item Producing probabilistic models of sediment entrainment based on the representation of turbulent flow forces as a random time series.
+	\item Developing a discrete element simulation of sediment transport using angular (non-spherical) grains to understand the impact of particle shape on the stability and transport characteristics of coarse sediment.
+	\item Surveying steep mountain channels with Unmanned aerial vehicles and structure from motion to determine the stability and history of alluvial reaches in otherwise colluvial channels.
+
+\end{itemizeit}
+
+\item {\bf Course Content Developer}, UBC Geography Department. \hfill (Nov. 2020 -- Sep. 2021)
+
+	\begin{itemizeit} 
+		\item Produced a 45 minute video documentary of a geomorphology field trip in collaboration with a professor and an audio-visual specialist for use in a 4th year undergraduate fluvial geomorphology course. This film educates students on processes and features of mountain river channels and replaced the in-person field trip which would have normally been taken if not for COVID.
+		\item Developed five laboratory assignments for a first year undergraduate geomorphology course. A virtual field trip to the Tacoma watershed of Mount Rainier is presented to students using Tapestry, while data sets and assignments from the watershed are provided for students in Canvas. Using these data sets, students analyze hillslope stability, volcanic processes, river morphology, climate change, and glacial processes for their course laboratory component.
+		\item Delivered several video explanations of ecological ideas which were incorporated into a virtual field trip phone application for a first year geography course on climate and ecosystems. Students travel to Vancouver parks and hear these video lectures when they reach the location they were originally filmed. This effort was completed with grant funding to introduce alternative technologies into Earth Science education.
+		\item Constructed five laboratory assignments for students in a third year undergraduate "Statistics in Geography" course. Students obtain the assignment packet from Github and perform inferential statistics calculations on real-world data sets.
+		\item Students perform calculations using R in Jupyter notebooks hosted on a Cloud Computing server.  As they complete the assignments, students make conclusions on real-world pollution, ecology, climate, and social problems during the assignments as they learn R programming, cloud computing, version control, bash scripting, and statistical analysis techniques.
+	\end{itemizeit}
+
+\item {\bf Geography Teaching Assistant}, University of British Columbia. \hfill (Sep. 2015 -- Aug. 2021)
+
+\begin{itemizeit} % Reduce space between items
+	\item Produced assignments and exam questions, evaluated student work, delivered guest lectures, hosted exams, conducted laboratory tutorials, performed classroom demonstrations, hosted office hours, facilitated group-work sessions, led field trips, managed educational technology tools (Tapestry, Canvas, Blackboard, Github, Syzygy, Zoom, Slack), and calculated student marks for 20 courses totaling more than 3600 hours of contracted work.
+	\item Courses included Introductory Climate and Ecosystems (1st Year Undergraduate), Introductory Geomorphology (1st Year Undergraduate), Geomorphic Processes and Hazards (2nd Year Undergraduate), Statistics in Geography (3rd Year Undergraduate), Fluvial Geomorphology (4th year Undergraduate), and Fluvial Geomorphology (Graduate level).
+	\item Received the UBC Geography "Outstanding TA" award in 2020 in recognition of ``significant contributions to undergraduate education" in the UBC Geography department.
+	\item Completed information security, inclusive teaching, classroom climate, lesson planning, time management, and workplace violence prevention workshops in relation to TA roles.
+\end{itemizeit}
+
+\item {\bf Academic Coach}, UBC Varsity Athletics. \hfill (Sep. 2015 -- May 2017)
+
+\begin{itemizeit}
+	\item Conducted one-on-one and group tutorial lessons on calculus, chemistry, physics, and statistics for at-risk student athletes.
+	\item Mentored students in problem solving, communication, and academic goal setting.
+	\item Prepared and distributed problem sets and example problems to build student confidence with exam material.
+	\item Delivered academic skills workshops to groups of student athletes on topics ranging from presentation skills to time management.
+\end{itemizeit}
+
+
+\item {\bf Physics Teaching Assistant}, University of British Columbia. \hfill (Sep. 2014 -- Jan. 2015)
+
+	\begin{itemizeit}
+		\item Conducted laboratory and recitation classes, evaluated student assignments and exams, hosted office hour sessions, provided guest lectures, and hosted exams.
+		\item Courses included Introductory Mechanics (1st Year Undergraduate), Introductory Electrodynamics (1st Year Undergraduate), Statistical Physics (3rd Year Undergraduate), and Solid State Physics (4th Year Undergraduate).
+	\end{itemizeit}
+
+
+\item {\bf Physics Grader}, West Virginia University. \hfill (Sep. 2012 -- May 2013)
+
+\begin{itemizeit}
+	\item Evaluated student assignments and exams, proctored exams, and provided feedback on student performance.
+	\item Courses included Mathematical Methods in Physics (2nd Year Undergraduate) and Introduction to Quantum Mechanics (3rd Year Undergraduate).
+\end{itemizeit}
+
+\item {\bf Research Intern}, Nanophotonics Laboratory, WVU Physics. \hfill (Jun. 2011 -- May. 2012)
+
+\begin{itemizeit}
+	\item Conducted original research with laser spectroscopy, including (1) the relaxation dynamics of hot semiconductor crystals and (2) the production of high-frequency (THz) light from optical rectification.
+	\item Constructed automated optical experiments using Titanium-Sapphire lasers and Labview, built a lock-in amplifiers from scratch, and conducted infrared spectroscopy.
+	\item Presented research in several undergraduate conferences and published some work in the Optics Letters journal.
+\end{itemizeit}
+
+\end{itemize}
+
+	\section*{Miscellaneous}
+	\begin{itemize}
+		\item \textbf{Programming Languages:} Python, Bash, Matlab, \LaTeX, Emacs, Vim, C, C++, R, Labview, Git, Mathematica, and SLURM.
+		\item \textbf{Peer Reviewing Activity:} Water Resources Research, Earth Surface Processes, Journal of Geophysical Research: Earth Surface.
+		\item \textbf{Laboratory Skills}: Optical Experiments, Experiment Automation, Acoustic Doppler Velociometry, Particle Image Velociometry, Particle Tracking Velociometry, Image Analysis (Structure from Motion, Object Localization, and Object Tracking).
+	\end{itemize}
+	\vfill
+
+\end{document}
+
+%%% Local Variables: 
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% End: 
